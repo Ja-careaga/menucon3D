@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles3d.css"
+    <style>
+        /* Estilos básicos del menú */        
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="diseno.html">Diseño gráfico</a></li>
+        <li><a href="model3d.html">Modelado 3D</a></li>
+        <li><a href="mark.html">Marketing</a></li>
+    </ul>
+    
+    <!-- Imagen principal -->
+    <div class="imagen-fondo">
+        <model-viewer 
+
+            src="elementos/model3d/Chair.glb"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls 
+            tone-mapping="commerce"
+            poster="poster.webp" 
+            shadow-intensity="1">
+            
+          <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+          </div>
+    
+          <button slot="ar-button" id="ar-button">
+              View in your space
+          </button>
+    
+          <div id="ar-prompt">
+              <img src="elementos/model3d/Chair.webp">
+          </div>
+    
+        </model-viewer>
+    </div>
+	
+	 <h2><center>Colocación de video</center></h2>
+    
+    <!-- Segundo Contenedor para el video y la información -->
+    <div class="contenedorVideo">
+        <!-- Segundo video de YouTube incrustado -->
+        <iframe class="miVideo" width="560" height="315" src="https://www.youtube.com/embed/10GHKjgQIR0" frameborder="0" allowfullscreen></iframe>
+
+        <!-- Información adicional -->
+        <div class="informacion">
+            <h2>Título del Segundo Video</h2>
+            <p>Descripción o cualquier otra información que desees mostrar al lado del video.</p>
+        </div>
+    </div>
+
+	<h2><center>Galeria</center></h2>
+
+    <!-- Estilo para la galería -->
+
+    <div class="galeria">
+        <div class="imagen">
+            <img src="elementos/gal/1.jpg" alt="Imagen 1">
+        </div>
+        <div class="imagen">
+            <img src="elementos/gal/2.jpg" alt="Imagen 2">
+        </div>
+        <div class="imagen">
+            <img src="elementos/gal/3.jpeg" alt="Imagen 3">
+        </div>
+        <div class="imagen">
+            <img src="elementos/gal/4.gif" alt="Imagen 4">
+        </div>
+
+        <!--formulario-->
+
+    </div> <form action="enviar.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <input type="submit" value="Enviar">
+        </form>
+
+        <script src="js/script.js"></script>
+        <!-- Loads <model-viewer> for browsers: -->
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+
+    </body>
+
+</html>
